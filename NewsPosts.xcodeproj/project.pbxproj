@@ -13,6 +13,7 @@
 		62C99EDB2AADC3DA00F1BC1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C99ED92AADC3DA00F1BC1E /* Main.storyboard */; };
 		62C99EDD2AADC3DA00F1BC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */; };
 		62C99EE02AADC3DA00F1BC1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */; };
+		62C99EEA2AADC76800F1BC1E /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EE92AADC76800F1BC1E /* PostCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62C99EDF2AADC3DA00F1BC1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62C99EE12AADC3DA00F1BC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62C99EE92AADC76800F1BC1E /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		62C99ED22AADC3DA00F1BC1E /* NewsPosts */ = {
 			isa = PBXGroup;
 			children = (
+				62C99EEB2AADCA5900F1BC1E /* Views */,
 				62C99ED32AADC3DA00F1BC1E /* AppDelegate.swift */,
 				62C99ED52AADC3DA00F1BC1E /* SceneDelegate.swift */,
 				62C99ED72AADC3DA00F1BC1E /* ViewController.swift */,
-				62C99ED92AADC3DA00F1BC1E /* Main.storyboard */,
 				62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */,
 				62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */,
 				62C99EE12AADC3DA00F1BC1E /* Info.plist */,
 			);
 			path = NewsPosts;
+			sourceTree = "<group>";
+		};
+		62C99EEB2AADCA5900F1BC1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62C99ED92AADC3DA00F1BC1E /* Main.storyboard */,
+				62C99EE92AADC76800F1BC1E /* PostCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +139,7 @@
 				62C99EE02AADC3DA00F1BC1E /* LaunchScreen.storyboard in Resources */,
 				62C99EDD2AADC3DA00F1BC1E /* Assets.xcassets in Resources */,
 				62C99EDB2AADC3DA00F1BC1E /* Main.storyboard in Resources */,
+				62C99EEA2AADC76800F1BC1E /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
