@@ -18,6 +18,7 @@
 		62C99EF22AADCDAE00F1BC1E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */; };
 		62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */; };
 		62C99EF92AADCFDD00F1BC1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF82AADCFDD00F1BC1E /* Constants.swift */; };
+		62C99EFD2AADDF9300F1BC1E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EFC2AADDF9300F1BC1E /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataModel.swift; sourceTree = "<group>"; };
 		62C99EF82AADCFDD00F1BC1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		62C99EFC2AADDF9300F1BC1E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = NewsPosts/Views/PostCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */,
 				62C99ED92AADC3DA00F1BC1E /* Main.storyboard */,
 				62C99EE92AADC76800F1BC1E /* PostCell.xib */,
+				62C99EFC2AADDF9300F1BC1E /* PostCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C99EFD2AADDF9300F1BC1E /* PostCell.swift in Sources */,
 				62C99EF22AADCDAE00F1BC1E /* ApiManager.swift in Sources */,
 				62C99ED82AADC3DA00F1BC1E /* ViewController.swift in Sources */,
 				62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */,
