@@ -15,6 +15,9 @@
 		62C99EE02AADC3DA00F1BC1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */; };
 		62C99EEA2AADC76800F1BC1E /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EE92AADC76800F1BC1E /* PostCell.xib */; };
 		62C99EEE2AADCC6C00F1BC1E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62C99EED2AADCC6C00F1BC1E /* Alamofire */; };
+		62C99EF22AADCDAE00F1BC1E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */; };
+		62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */; };
+		62C99EF92AADCFDD00F1BC1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF82AADCFDD00F1BC1E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		62C99EDF2AADC3DA00F1BC1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62C99EE12AADC3DA00F1BC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62C99EE92AADC76800F1BC1E /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataModel.swift; sourceTree = "<group>"; };
+		62C99EF82AADCFDD00F1BC1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +66,12 @@
 		62C99ED22AADC3DA00F1BC1E /* NewsPosts */ = {
 			isa = PBXGroup;
 			children = (
-				62C99EEB2AADCA5900F1BC1E /* Views */,
 				62C99ED32AADC3DA00F1BC1E /* AppDelegate.swift */,
 				62C99ED52AADC3DA00F1BC1E /* SceneDelegate.swift */,
-				62C99ED72AADC3DA00F1BC1E /* ViewController.swift */,
-				62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */,
-				62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */,
+				62C99EF02AADCD8300F1BC1E /* Controllers */,
+				62C99EEF2AADCD7200F1BC1E /* Models */,
+				62C99EEB2AADCA5900F1BC1E /* Views */,
+				62C99EF72AADCFC700F1BC1E /* Resources */,
 				62C99EE12AADC3DA00F1BC1E /* Info.plist */,
 			);
 			path = NewsPosts;
@@ -74,10 +80,37 @@
 		62C99EEB2AADCA5900F1BC1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */,
 				62C99ED92AADC3DA00F1BC1E /* Main.storyboard */,
 				62C99EE92AADC76800F1BC1E /* PostCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		62C99EEF2AADCD7200F1BC1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */,
+				62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62C99EF02AADCD8300F1BC1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62C99ED72AADC3DA00F1BC1E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62C99EF72AADCFC700F1BC1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */,
+				62C99EF82AADCFDD00F1BC1E /* Constants.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C99EF22AADCDAE00F1BC1E /* ApiManager.swift in Sources */,
 				62C99ED82AADC3DA00F1BC1E /* ViewController.swift in Sources */,
+				62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */,
 				62C99ED42AADC3DA00F1BC1E /* AppDelegate.swift in Sources */,
 				62C99ED62AADC3DA00F1BC1E /* SceneDelegate.swift in Sources */,
+				62C99EF92AADCFDD00F1BC1E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
