@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 class ApiManager {
     
@@ -14,9 +15,9 @@ class ApiManager {
     
     
     //function to save fetched data to our model
-    func getData() {
+    func getData(reloadView: UITableView) {
         
-        let url = "https://raw.githubusercontent.com/anton-natife/jsons/master/api/main.json"
+        let url = K.url
         
         fetchData(url: url) { result in
             switch result {
@@ -24,6 +25,10 @@ class ApiManager {
                 //If success -> result saved to "posts"
                 let result = userResult.posts
                 self.posts = result
+                
+                DispatchQueue.main.async {
+                    reloadView.reloadData()
+                }
                 
             case .failure(let error):
                 print(error)
