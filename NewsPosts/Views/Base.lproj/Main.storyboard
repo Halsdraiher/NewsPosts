@@ -35,9 +35,13 @@
                     <navigationItem key="navigationItem" title="Posts" id="dZG-sB-2V2">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.up.arrow.down" catalog="system" id="oE0-fm-Xrg">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="sortPostsWithSender:" destination="xRG-La-uGE" id="cKN-VM-uaJ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sortButton" destination="oE0-fm-Xrg" id="awi-GM-Ec0"/>
                         <segue destination="iPa-Lr-Mof" kind="show" identifier="goToPost" id="zMv-NO-pHO"/>
                     </connections>
                 </tableViewController>

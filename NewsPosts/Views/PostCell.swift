@@ -9,6 +9,9 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
+    var expandButtonPressed: (() -> (Void))!
+    
+    
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postText: UILabel!
     @IBOutlet weak var postLikes: UILabel!
@@ -25,8 +28,12 @@ class PostCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         
     }
+    
+    @IBAction func expandButtonTapped(_ sender: UIButton) {
+        expandButtonPressed()
+    }
+
 
 }
