@@ -14,6 +14,7 @@
 		62C99EDD2AADC3DA00F1BC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EDC2AADC3DA00F1BC1E /* Assets.xcassets */; };
 		62C99EE02AADC3DA00F1BC1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EDE2AADC3DA00F1BC1E /* LaunchScreen.storyboard */; };
 		62C99EEA2AADC76800F1BC1E /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C99EE92AADC76800F1BC1E /* PostCell.xib */; };
+		62C99EEE2AADCC6C00F1BC1E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62C99EED2AADCC6C00F1BC1E /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C99EEE2AADCC6C00F1BC1E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +96,9 @@
 			dependencies = (
 			);
 			name = NewsPosts;
+			packageProductDependencies = (
+				62C99EED2AADCC6C00F1BC1E /* Alamofire */,
+			);
 			productName = NewsPosts;
 			productReference = 62C99ED02AADC3DA00F1BC1E /* NewsPosts.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 62C99EC72AADC3D900F1BC1E;
+			packageReferences = (
+				62C99EEC2AADCC6C00F1BC1E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 62C99ED12AADC3DA00F1BC1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -307,6 +315,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +344,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62C99EEC2AADCC6C00F1BC1E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62C99EED2AADCC6C00F1BC1E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62C99EEC2AADCC6C00F1BC1E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62C99EC82AADC3D900F1BC1E /* Project object */;
 }
