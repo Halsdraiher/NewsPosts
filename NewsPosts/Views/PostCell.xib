@@ -73,6 +73,9 @@
                         <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Expand"/>
+                        <connections>
+                            <action selector="expandButtonTapped:" destination="x0d-6V-ibr" eventType="touchUpInside" id="szr-4R-lZC"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

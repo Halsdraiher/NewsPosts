@@ -17,4 +17,5 @@ struct Posts: Codable {
     let title: String
     let preview_text: String
     let likes_count: Int
+
 }

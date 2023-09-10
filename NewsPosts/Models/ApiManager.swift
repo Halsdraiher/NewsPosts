@@ -13,7 +13,6 @@ class ApiManager {
     
     var posts: [Posts]?
     
-    
     //function to save fetched data to our model
     func getData(reloadView: UITableView) {
         
@@ -25,6 +24,7 @@ class ApiManager {
                 //If success -> result saved to "posts"
                 let result = userResult.posts
                 self.posts = result
+                
                 
                 DispatchQueue.main.async {
                     reloadView.reloadData()
@@ -66,4 +66,19 @@ class ApiManager {
             }
     }
     
+
+    func sortPostsByDate() {
+        
+        posts?.sort(by: { $0.timeshamp > $1.timeshamp })
+        
+        
+    }
+    
+    func sortPostsByLikes() {
+        
+        posts?.sort(by: { $0.likes_count > $1.likes_count })
+        
+    }
+    
+ 
 }
