@@ -15,6 +15,6 @@ struct K {
     
     static var goToPostIdentifier = "goToPost"
     
-    static var url = "https://raw.githubusercontent.com/anton-natife/jsons/master/api/main.json"
+    static var url = "https://raw.githubusercontent.com/anton-natife/jsons/master/api/"
     
 }

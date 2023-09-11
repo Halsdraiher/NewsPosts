@@ -12,7 +12,6 @@ class PostsController: UITableViewController {
     private var apiManager = ApiManager()
     private var expandedCell: Set<Int> = Set()
     
-    
     @IBOutlet weak var sortButton: UIBarButtonItem!
 
     override func viewDidLoad() {
