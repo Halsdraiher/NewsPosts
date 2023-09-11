@@ -20,6 +20,7 @@
 		62C99EF92AADCFDD00F1BC1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF82AADCFDD00F1BC1E /* Constants.swift */; };
 		62C99EFD2AADDF9300F1BC1E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EFC2AADDF9300F1BC1E /* PostCell.swift */; };
 		62C99F062AAF2D6A00F1BC1E /* SelectedPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99F052AAF2D6A00F1BC1E /* SelectedPostController.swift */; };
+		62C99F092AAF362400F1BC1E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 62C99F082AAF362400F1BC1E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C99F092AAF362400F1BC1E /* Kingfisher in Frameworks */,
 				62C99EEE2AADCC6C00F1BC1E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +139,7 @@
 			name = NewsPosts;
 			packageProductDependencies = (
 				62C99EED2AADCC6C00F1BC1E /* Alamofire */,
+				62C99F082AAF362400F1BC1E /* Kingfisher */,
 			);
 			productName = NewsPosts;
 			productReference = 62C99ED02AADC3DA00F1BC1E /* NewsPosts.app */;
@@ -168,6 +171,7 @@
 			mainGroup = 62C99EC72AADC3D900F1BC1E;
 			packageReferences = (
 				62C99EEC2AADCC6C00F1BC1E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				62C99F072AAF362400F1BC1E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 62C99ED12AADC3DA00F1BC1E /* Products */;
 			projectDirPath = "";
@@ -357,8 +361,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.halsdraiher.NewsPosts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,8 +393,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,9 +403,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.halsdraiher.NewsPosts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -434,6 +444,14 @@
 				minimumVersion = 5.8.0;
 			};
 		};
+		62C99F072AAF362400F1BC1E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +459,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 62C99EEC2AADCC6C00F1BC1E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		62C99F082AAF362400F1BC1E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62C99F072AAF362400F1BC1E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
