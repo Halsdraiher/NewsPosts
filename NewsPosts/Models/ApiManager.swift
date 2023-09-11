@@ -19,9 +19,9 @@ class ApiManager {
     //function to save fetched data to our model
     func getData(reloadView: UITableView) {
         
-        let url = (K.url + "main.json")
+        let urlString = (K.url + "main.json")
         
-        fetchData(url: url) { result in
+        fetchData(url: urlString) { result in
             switch result {
             case .success(let userResult):
                 //If success -> result saved to "posts"
@@ -85,9 +85,9 @@ class ApiManager {
     
     func getDataForSelectedPost(id: String, reloadView: UIViewController) {
         
-        let url = (K.url + "posts/\(id).json")
+        let urlString = (K.url + "posts/\(id).json")
         
-        fetchDataForSelectedPost(url: url) { result in
+        fetchDataForSelectedPost(url: urlString) { result in
             switch result {
             case .success(let userResult):
                 //If success -> result saved to "posts"
@@ -114,7 +114,7 @@ class ApiManager {
             .response { response in
                 
                 // Check if data is resived
-                print("Received data: \(String(data: response.data ?? Data(), encoding: .utf8) ?? "No data")")
+//                print("Received data: \(String(data: response.data ?? Data(), encoding: .utf8) ?? "No data")")
                 
                 guard let data = response.data else {
                     if let error = response.error {

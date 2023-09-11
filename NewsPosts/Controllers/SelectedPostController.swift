@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SelectedPostController: UIViewController {
     
@@ -16,13 +17,17 @@ class SelectedPostController: UIViewController {
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postText: UITextView!
     @IBOutlet weak var postLikes: UILabel!
+    @IBOutlet weak var postLikesImage: UIImageView!
     @IBOutlet weak var postDate: UILabel!
     @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         apiManager.getDataForSelectedPost(id: getId(), reloadView: self)
+        indicator.startAnimating()
+        
         
     }
     
@@ -34,11 +39,10 @@ class SelectedPostController: UIViewController {
             postLikes.text = String(post.likes_count)
             postDate.text = getDate()
             
-//            let url = URL(string: "\(post.postImage)")
-//            postImage.kf.setImage(with: url)
-//            indicator.stopAnimating()
-//            indicator.isHidden = true
-            
+            let url = URL(string: "\(post.postImage)")
+            postImage.kf.setImage(with: url)
+            indicator.stopAnimating()
+            postLikesImage.isHidden = false
             
         }
         
