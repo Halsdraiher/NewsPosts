@@ -19,3 +19,15 @@ struct Posts: Codable {
     let likes_count: Int
 
 }
+
+struct SelectedPostData: Codable {
+    let post: Post
+}
+
+struct Post: Codable {
+    let timeshamp: Int
+    let title: String
+    let text: String
+    let postImage: String
+    let likes_count: Int
+}

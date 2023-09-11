@@ -11,7 +11,6 @@ class PostCell: UITableViewCell {
     
     var expandButtonPressed: (() -> (Void))!
     
-    
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postText: UILabel!
     @IBOutlet weak var postLikes: UILabel!
