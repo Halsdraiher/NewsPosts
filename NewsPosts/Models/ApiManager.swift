@@ -68,14 +68,11 @@ class ApiManager {
     
 
     func sortPostsByDate() {
-        
         posts?.sort(by: { $0.timeshamp > $1.timeshamp })
-        
         
     }
     
     func sortPostsByLikes() {
-        
         posts?.sort(by: { $0.likes_count > $1.likes_count })
         
     }

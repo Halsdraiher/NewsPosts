@@ -56,6 +56,7 @@ class PostsController: UITableViewController {
                 cell.expandButton.setTitle("Collapse", for: .normal)
             } else {
                 cell.postText?.numberOfLines = 2
+                cell.expandButton.setTitle("Expand", for: .normal)
             }
             
             cell.expandButtonPressed = {
@@ -84,6 +85,9 @@ class PostsController: UITableViewController {
     //MARK: - Sorting posts
     
     @IBAction func sortPosts(sender: UIBarButtonItem) {
+        
+        expandedCell.removeAll()
+        
         //Create alert to show options
         let alert = UIAlertController(title: "Sort by", message: "choose option", preferredStyle: .actionSheet)
         
@@ -130,7 +134,6 @@ class PostsController: UITableViewController {
         return numberOfLines
     }
     
-
     
 }
 
