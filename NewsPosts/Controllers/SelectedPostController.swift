@@ -24,8 +24,8 @@ class SelectedPostController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        apiManager.getDataForSelectedPost(id: getId(), reloadView: self)
+        
+        apiManager.getDataForSelectedPost(id: SelectedPostManager.getId(posts: posts!), reloadView: self)
         indicator.startAnimating()
         
         
@@ -37,7 +37,7 @@ class SelectedPostController: UIViewController {
             postTitle.text = post.title
             postText.text = post.text
             postLikes.text = String(post.likes_count)
-            postDate.text = getDate()
+            postDate.text = SelectedPostManager.getDate(fromTimestamp: post.timeshamp)
             
             let url = URL(string: "\(post.postImage)")
             postImage.kf.setImage(with: url)
@@ -45,30 +45,6 @@ class SelectedPostController: UIViewController {
             postLikesImage.isHidden = false
             
         }
-        
-        
-    }
-    
-    func getId() -> String {
-        
-        let id = String(posts!.postId)
-        return id
-        
-    }
-    
-    func getDate() -> String {
-        let dateFormatter = DateFormatter()
-        var formattedDate = ""
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        if let post = apiManager.post {
-            let date = Date(timeIntervalSince1970: TimeInterval(post.timeshamp))
-            formattedDate = dateFormatter.string(from: date)
-            
-        }
-        
-        return formattedDate
-        
     }
 
 

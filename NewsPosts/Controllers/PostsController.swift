@@ -16,7 +16,7 @@ class PostsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.isHidden = true
         apiManager.getData(reloadView: tableView)
         tableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
 
@@ -76,7 +76,7 @@ class PostsController: UITableViewController {
                     cell.expandButton.isHidden = true
                 }
         }
-        
+        tableView.isHidden = false
         return cell
     }
     

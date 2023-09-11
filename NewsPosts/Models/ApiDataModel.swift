@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+//MARK: - Models for All Posts Api
 struct PostsData: Codable {
     let posts: [Posts]
 }
@@ -19,6 +21,8 @@ struct Posts: Codable {
     let likes_count: Int
 
 }
+
+//MARK: - Models for Selected Post Api
 
 struct SelectedPostData: Codable {
     let post: Post
