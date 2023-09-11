@@ -134,6 +134,23 @@ class PostsController: UITableViewController {
         return numberOfLines
     }
     
+    //MARK: - Segue to SelectedPostController
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: K.goToPostIdentifier, sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! SelectedPostController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.posts = apiManager.posts?[indexPath.row]
+        }
+        
+    }
     
 }
 

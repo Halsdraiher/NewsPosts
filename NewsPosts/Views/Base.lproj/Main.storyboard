@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="109.16030534351144" y="10.563380281690142"/>
         </scene>
-        <!--View Controller-->
+        <!--Selected Post Controller-->
         <scene sceneID="sV1-Jn-LV4">
             <objects>
-                <viewController id="iPa-Lr-Mof" sceneMemberID="viewController">
+                <viewController id="iPa-Lr-Mof" customClass="SelectedPostController" customModule="NewsPosts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MB-6P-gsN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +130,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aDT-Lv-xAX"/>
+                    <connections>
+                        <outlet property="postDate" destination="2rh-b3-QSy" id="P4P-Q8-hh6"/>
+                        <outlet property="postImage" destination="2Ih-LK-eKs" id="EKc-dZ-HO0"/>
+                        <outlet property="postLikes" destination="z80-ep-aAF" id="tZA-FD-WaK"/>
+                        <outlet property="postText" destination="sTk-pc-9RI" id="a03-Je-0al"/>
+                        <outlet property="postTitle" destination="AnQ-eK-xZM" id="KZh-Kq-5u2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vow-w8-nYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

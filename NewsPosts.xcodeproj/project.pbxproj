@@ -19,6 +19,7 @@
 		62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */; };
 		62C99EF92AADCFDD00F1BC1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EF82AADCFDD00F1BC1E /* Constants.swift */; };
 		62C99EFD2AADDF9300F1BC1E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99EFC2AADDF9300F1BC1E /* PostCell.swift */; };
+		62C99F062AAF2D6A00F1BC1E /* SelectedPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C99F052AAF2D6A00F1BC1E /* SelectedPostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataModel.swift; sourceTree = "<group>"; };
 		62C99EF82AADCFDD00F1BC1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62C99EFC2AADDF9300F1BC1E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = NewsPosts/Views/PostCell.swift; sourceTree = SOURCE_ROOT; };
+		62C99F052AAF2D6A00F1BC1E /* SelectedPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				62C99ED72AADC3DA00F1BC1E /* PostsController.swift */,
+				62C99F052AAF2D6A00F1BC1E /* SelectedPostController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				62C99EFD2AADDF9300F1BC1E /* PostCell.swift in Sources */,
 				62C99EF22AADCDAE00F1BC1E /* ApiManager.swift in Sources */,
+				62C99F062AAF2D6A00F1BC1E /* SelectedPostController.swift in Sources */,
 				62C99ED82AADC3DA00F1BC1E /* PostsController.swift in Sources */,
 				62C99EF62AADCEF700F1BC1E /* ApiDataModel.swift in Sources */,
 				62C99ED42AADC3DA00F1BC1E /* AppDelegate.swift in Sources */,
