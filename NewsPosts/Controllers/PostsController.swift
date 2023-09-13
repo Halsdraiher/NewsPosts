@@ -16,7 +16,7 @@ class PostsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isHidden = true
+        
         apiManager.getData(reloadView: tableView)
         tableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
 
@@ -68,7 +68,7 @@ class PostsController: UITableViewController {
                 tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
             
-            let numberOfLines = numberOfVisibleLines(in: cell.postText)
+            let numberOfLines = PostsManager.numberOfVisibleLines(in: cell.postText)
 
             if numberOfLines > 2 {
                     cell.expandButton.isHidden = false
@@ -76,7 +76,7 @@ class PostsController: UITableViewController {
                     cell.expandButton.isHidden = true
                 }
         }
-        tableView.isHidden = false
+        
         return cell
     }
     
@@ -123,15 +123,6 @@ class PostsController: UITableViewController {
         UITableView.automaticDimension
     }
     
-    func numberOfVisibleLines(in label: UILabel) -> Int {
-        
-        let maxSize = CGSize(width: label.bounds.size.width, height: CGFloat.greatestFiniteMagnitude)
-        let textSize = (label.text ?? "").boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: label.font!], context: nil)
-        
-        let numberOfLines = Int(ceil(textSize.height / label.font.lineHeight))
-        
-        return numberOfLines
-    }
     
     //MARK: - Segue to SelectedPostController
     
