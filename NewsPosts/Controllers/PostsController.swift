@@ -13,24 +13,23 @@ class PostsController: UITableViewController {
     private var expandedCell: Set<Int> = Set()
     
     @IBOutlet weak var sortButton: UIBarButtonItem!
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        apiManager.getData(reloadView: tableView)
+        apiManager.getData(tableView: tableView)
         tableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+      
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
     
     
     //MARK: - Setting cells
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        apiManager.posts?.count ?? 1
+        apiManager.posts?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,13 +49,9 @@ class PostsController: UITableViewController {
             cell.postDate.text = formatedDate
             
            
-            if expandedCell.contains(indexPath.row) {
-                cell.postText?.numberOfLines = 0
-                cell.expandButton.setTitle("Collapse", for: .normal)
-            } else {
-                cell.postText?.numberOfLines = 2
-                cell.expandButton.setTitle("Expand", for: .normal)
-            }
+            let isExpanded = expandedCell.contains(indexPath.row)
+            cell.postText?.numberOfLines = isExpanded ? 0 : 2
+            cell.expandButton.setTitle(isExpanded ? "Collapse" : "Expand", for: .normal)
             
             cell.expandButtonPressed = {
                 if self.expandedCell.contains(indexPath.row) {

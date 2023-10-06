@@ -57,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6201E7DB2AD0A2F40020E3E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		62C99EC72AADC3D900F1BC1E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +86,7 @@
 			children = (
 				62C99ED32AADC3DA00F1BC1E /* AppDelegate.swift */,
 				62C99ED52AADC3DA00F1BC1E /* SceneDelegate.swift */,
+				6201E7DB2AD0A2F40020E3E6 /* Services */,
 				62C99EF02AADCD8300F1BC1E /* Controllers */,
 				62C99EEF2AADCD7200F1BC1E /* Models */,
 				62C99EEB2AADCA5900F1BC1E /* Views */,
@@ -101,7 +110,6 @@
 		62C99EEF2AADCD7200F1BC1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				62C99EF12AADCDAE00F1BC1E /* ApiManager.swift */,
 				62C99EF52AADCEF700F1BC1E /* ApiDataModel.swift */,
 				62073E8E2AAF4AD70030A1BE /* SelectedPostManager.swift */,
 				62073E902AAF635C0030A1BE /* PostsManager.swift */,

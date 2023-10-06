@@ -17,7 +17,7 @@ class ApiManager {
     //MARK: - Fetch and save data for All Posts
     
     //function to save fetched data to our model
-    func getData(reloadView: UITableView) {
+    func getData(tableView: UITableView) {
         
         let urlString = (K.url + "main.json")
         
@@ -28,9 +28,9 @@ class ApiManager {
                 let result = userResult.posts
                 self.posts = result
                 
-                
                 DispatchQueue.main.async {
-                    reloadView.reloadData()
+                    
+                    tableView.reloadData()                    
                 }
                 
             case .failure(let error):
