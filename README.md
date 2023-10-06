@@ -57,7 +57,7 @@ This is a simple iOS app that allows you to download data in JSON format from a 
  -The detail screen displays the selected post's title, full text, likes count, date, and an associated image.
 
 
-### Usage
+## Usage
 
 To use the app:
 
